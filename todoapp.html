@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    
+    <!-- CSS -->
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background:linear-gradient(110deg,#4b86adc5,#085fc2b9);
+        }
+        .card
+        {
+           background:linear-gradient(80deg,#fe00948e,#ff8521de);
+           text-align: center;
+           width:600px;
+           margin: auto;
+           border-radius:20px;
+           padding-bottom:30px;
+        }
+        .card #tasks
+        {
+            height:45px;
+            width:400px;
+            font-size:18px;
+            margin-right:20px;
+            border-radius:15px;
+            padding-left:20px;
+            margin-top:30px;
+            margin-bottom:30px;
+            border:1.5px solid rgb(99, 96, 96);
+        }
+        .card #addbtn
+        {
+            height:45px;
+            width:90px;
+            font-size:20px; 
+            border-radius:30px;
+            border:1.5px solid rgb(99, 96, 96);
+            cursor: pointer;
+        }
+        h1
+        {
+            text-align: center;
+            margin-top:30px;
+        }
+        .unorder li
+        {
+            list-style-type:none;
+            background-color:rgba(148, 40, 40, 0.158);
+            height:40px;
+            padding-top:10px;
+            border-radius:20px;
+            cursor: pointer;  
+            width:90%; 
+            margin: auto;
+            margin-top:4px;
+            text-align: left;
+            padding-left:40px;   
+            display:flex;
+            justify-content:space-between;    
+            position: relative;
+        }
+        .unorder li::before
+        {
+            height:22px;
+            width:22PX;
+            position: absolute;
+            content:'';
+            background-image:url(unchecked.png);
+            background-size:cover;
+            left:10px;
+            
+        }
+        li span
+        {
+           
+            font-size:25px;
+            position: absolute;
+            width:40px;
+            text-align: center;
+            right:15px;
+            bottom:5px;  
+        }
+        li span:hover
+        {
+            background-color:rgba(128, 128, 128, 0.452);
+            border-radius:20px;
+        }
+        .unorder li.checked::before
+        {
+            background-image:url(checked.png);
+           
+
+        }
+    </style>
+</head>
+<body>
+        <h1>To-Do-List.</h1>
+        <div class="card">
+            <input type="text"  id="tasks" placeholder="Enter you tasks..">
+            <input type="button"  id="addbtn" value="ADD">
+
+                <ul class="unorder">
+                 
+                </ul>
+        </div>
+        <script src="todoapp.js"></script>
+</body>
+</html>
+
